@@ -17,17 +17,9 @@ The **Document Retrieval System for Chat Applications** is a Python-based applic
 
 ## Requirements
 
-- Docker
-- Docker Compose
-- Redis
-- Python 3.9
-- Celery
-- Flask
-- SQLAlchemy
-- Redis Python client
-- Sentence Transformers
-- BeautifulSoup4
-- Requests
+Python: Version 3.11 or newer.
+Docker: To containerize and run the application and its dependencies.
+Docker Compose: To manage multi-container Docker applications.
 
 ## Project Structure
 
