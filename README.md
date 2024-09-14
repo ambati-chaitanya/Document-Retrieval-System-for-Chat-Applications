@@ -38,29 +38,9 @@ The **Document Retrieval System for Chat Applications** is a Python-based applic
 - `docker-compose.yml`: Defines the services (app and Redis) for the application.
 
 ## Setup Instructions
-Document-Retrieval-System-for-Chat-Applications/
-│
-├── app/
-│   ├── caching.py
-│   ├── database.py
-│   ├── query_encoder.py
-│   ├── scraper.py
-│   └── search.py
-│
-├── images/
-│   ├── system-architecture.png
-│   └── example-use-case.png
-│
-├── Dockerfile
-├── docker-compose.yml
-└── requirements.txt
-└── README.md
-
 
 ### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd Document-Retrieval-System-for-Chat-Applications
-
-
