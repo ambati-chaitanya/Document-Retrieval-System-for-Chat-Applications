@@ -14,7 +14,6 @@ The **Document Retrieval System for Chat Applications** is a Python-based applic
 - **Background Scraping**: Uses Celery to scrape news articles and update the database.
   
 ![Flask Logo](https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png)
-![Docker Logo](assets/docker_logo.png)
 
 ## Requirements
 
