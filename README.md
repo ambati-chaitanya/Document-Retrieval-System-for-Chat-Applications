@@ -12,6 +12,8 @@ The **Document Retrieval System for Chat Applications** is a Python-based applic
 - **Rate Limiting**: Limits API requests to prevent abuse.
 - **Document Storage**: Stores document content and embeddings in a SQLite database.
 - **Background Scraping**: Uses Celery to scrape news articles and update the database.
+  
+![Flask Logo](https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png)
 
 ## Requirements
 
