@@ -1,52 +1,29 @@
 # API with Redis Caching and Rate Limiting
 
-## Overview
+Welcome to the API project! This project is a Python Flask application that demonstrates a RESTful API with Redis caching, rate limiting, and background scraping capabilities. It also integrates with a SQLite database to manage document embeddings and user request counts.
 
-This project is a Python Flask application that provides an API with Redis caching and rate limiting features. It uses Celery for background tasks and SQLite for storing document embeddings and user request data.
+![API Overview](https://example.com/path/to/overview-image.png)  <!-- Replace with actual image URL -->
 
 ## Features
 
-- **Health Check Endpoint**: `/health` - Returns the status of the API.
-- **Search Endpoint**: `/search` - Accepts a query and user ID, performs a search, caches results, and enforces rate limits.
-- **Redis Caching**: Caches search query results to improve performance.
+- **Health Check Endpoint**: `/health` - Verifies if the API is running.
+- **Search Endpoint**: `/search` - Processes search queries, caches results, and applies rate limiting.
+- **Redis Caching**: Caches search results to enhance performance.
 - **Rate Limiting**: Limits API calls to prevent abuse.
-- **Document Storage**: Stores document content and embeddings in an SQLite database.
-- **Background Scraping**: Uses Celery to scrape news articles.
+- **Document Storage**: Saves document contents and embeddings in a SQLite database.
+- **Background Scraping**: Uses Celery to scrape and store news articles in the database.
 
-## Project Structure
+## Requirements
 
-```plaintext
-project-root/
-│
-├── app/
-│   ├── caching.py
-│   ├── database.py
-│   ├── query_encoder.py
-│   ├── scraper.py
-│   └── search.py
-│
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-## Dockerfile
-# Use an official Python runtime as a base image
-FROM python:3.9-slim
+- **Docker** - For containerizing the application and dependencies.
+- **Docker Compose** - To manage multi-container Docker applications.
 
-# Set the working directory in the container
-WORKDIR /app
+## Getting Started
 
-# Copy the requirements file into the container
-COPY requirements.txt .
+### 1. Clone the Repository
 
-# Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+First, clone this repository to your local machine:
 
-# Copy the entire app folder into the container at /app
-COPY app/ /app/
-
-# Expose the port Flask runs on
-EXPOSE 5000
-
-# Define the command to run the application
-CMD ["python", "api.py"]
+```bash
+git clone <repository-url>
+cd <repository-directory>
