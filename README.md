@@ -1,26 +1,30 @@
-# Flask API with Redis Caching, Rate Limiting, and Background Tasks
+# API with Redis Caching and Rate Limiting
+
+![API Overview](https://via.placeholder.com/800x400.png?text=API+Overview) <!-- Replace with actual image link -->
 
 ## Overview
 
-This project is a Python-based Flask API with Redis caching, rate limiting, and background tasks using Celery. It includes a search functionality with vector embeddings for document similarity and utilizes a SQLite database to store documents and user request data.
+This project is a Python Flask application that implements an API with caching and rate limiting features. It utilizes Redis for caching query results and a rate limiter to control API usage. The application also integrates with a SQLite database to store document embeddings and user API usage information. Additionally, it uses Celery for background tasks like scraping news articles.
 
 ## Features
 
 - **Health Check Endpoint**: `/health` - Returns the status of the API.
-- **Search Endpoint**: `/search` - Performs a search query, applies rate limits, and caches results.
-- **Redis Caching**: Caches search results to improve performance.
-- **Rate Limiting**: Limits the number of requests per user per minute.
-- **Document Storage**: Uses SQLite to store document content and embeddings.
-- **Background Scraping**: Scrapes news articles and stores them in the database using Celery.
+- **Search Endpoint**: `/search` - Accepts a query and user ID, performs a search, caches results, and enforces rate limits.
+- **Redis Caching**: Caches search query results to reduce computation time.
+- **Rate Limiting**: Limits the number of API calls per minute per user.
+- **Document Storage**: Stores document content and embeddings in a SQLite database.
+- **Background Scraping**: Uses Celery to scrape and process news articles.
 
-## Setup
+## Architecture
 
-### Prerequisites
+![Architecture Diagram](https://via.placeholder.com/800x400.png?text=Architecture+Diagram) <!-- Replace with actual image link -->
+
+## Requirements
 
 - Docker
 - Docker Compose
 
-### Getting Started
+## Setup
 
 1. **Clone the Repository**
 
