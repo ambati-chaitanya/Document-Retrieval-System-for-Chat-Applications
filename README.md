@@ -1,42 +1,29 @@
 # API with Redis Caching and Rate Limiting
 
-![API Illustration](https://source.unsplash.com/1600x900/?technology,code)
-
 ## Overview
 
-This project is a Python Flask application that demonstrates how to build an API with caching and rate limiting. The app integrates Redis for caching query results, uses SQLite for storing document embeddings and user data, and Celery for background tasks. This setup is ideal for applications needing efficient search capabilities and rate management.
+This project is a Python Flask application with Redis caching and rate limiting. It includes a Celery worker for background tasks like scraping news articles and a SQLite database to store document embeddings and user API usage information.
 
 ## Features
 
-- **Health Check Endpoint**: `/health` - Check if the API is running.
-- **Search Endpoint**: `/search` - Search for documents, with caching and rate limiting.
-- **Redis Caching**: Caches search results to improve performance.
-- **Rate Limiting**: Limits the number of API requests per user.
-- **Document Storage**: Uses SQLite to store document content and embeddings.
-- **Background Scraping**: Uses Celery to scrape and process news articles.
+- **Health Check Endpoint**: `/health` - Check the status of the API.
+- **Search Endpoint**: `/search` - Perform a search with rate limiting and caching.
+- **Redis Caching**: Cache search results to improve performance.
+- **Rate Limiting**: Limit the number of API calls per minute per user.
+- **Document Storage**: Store document content and embeddings in a SQLite database.
+- **Background Scraping**: Scrape and process news articles using Celery.
 
-![Flask Logo](https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png)
+## Prerequisites
 
-## Requirements
-
-- Docker
-- Docker Compose
+- **Docker**: Ensure Docker is installed on your machine.
+- **Docker Compose**: Required to run multi-container Docker applications.
 
 ## Setup
 
-### 1. Clone the Repository
+Follow these steps to get the project running:
 
-```bash
-git clone <repository-url>
-cd <repository-directory>
+1. **Clone the Repository**
 
-
-### Adding Images to Your README
-
-1. **API Illustration**: Find a relevant image on [Unsplash](https://unsplash.com/).
-2. **Flask Logo**: Source from the official [Flask website](https://flask.palletsprojects.com/en/2.0.x/).
-3. **SQLite Logo**: Download from the [official SQLite website](https://www.sqlite.org/).
-
-**Note**: Replace placeholders like `<repository-url>`, `<repository-directory>`, and `[your-email@example.com]` with actual values relevant to your project. 
-
-Feel free to adjust the text and images based on your project needs!
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
