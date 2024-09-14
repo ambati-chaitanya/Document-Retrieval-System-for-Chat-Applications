@@ -1,28 +1,28 @@
-# API with Redis Caching and Rate Limiting
+# Python Flask API with Redis Caching, Rate Limiting, and Celery
 
-Welcome to the API project! This project is a Python Flask application that demonstrates a RESTful API with Redis caching, rate limiting, and background scraping capabilities. It also integrates with a SQLite database to manage document embeddings and user request counts.
+## Overview
 
-![API Overview](https://example.com/path/to/overview-image.png)  <!-- Replace with actual image URL -->
+This project demonstrates a Python Flask application with Redis caching, rate limiting, and Celery for background tasks. It uses a SQLite database to store document embeddings and user API usage information. The application provides endpoints for health checks and search queries, while Celery handles news scraping tasks.
+
+![Project Diagram](images/project-diagram.png)  <!-- Add a diagram of your project's architecture -->
 
 ## Features
 
 - **Health Check Endpoint**: `/health` - Verifies if the API is running.
-- **Search Endpoint**: `/search` - Processes search queries, caches results, and applies rate limiting.
-- **Redis Caching**: Caches search results to enhance performance.
-- **Rate Limiting**: Limits API calls to prevent abuse.
-- **Document Storage**: Saves document contents and embeddings in a SQLite database.
-- **Background Scraping**: Uses Celery to scrape and store news articles in the database.
+- **Search Endpoint**: `/search` - Allows users to perform searches with caching and rate limiting.
+- **Redis Caching**: Caches search query results to improve performance.
+- **Rate Limiting**: Limits API calls to 5 per minute per user.
+- **Document Storage**: Stores document content and embeddings in a SQLite database.
+- **Background Tasks**: Uses Celery to scrape news articles and process them.
 
-## Requirements
+## Prerequisites
 
-- **Docker** - For containerizing the application and dependencies.
-- **Docker Compose** - To manage multi-container Docker applications.
+- **Docker**: To containerize the application and its dependencies.
+- **Docker Compose**: To manage multi-container Docker applications.
 
-## Getting Started
+## Setup
 
 ### 1. Clone the Repository
-
-First, clone this repository to your local machine:
 
 ```bash
 git clone <repository-url>
