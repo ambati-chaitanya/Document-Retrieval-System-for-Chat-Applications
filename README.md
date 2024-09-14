@@ -44,3 +44,19 @@ The **Document Retrieval System for Chat Applications** is a Python-based applic
 ```bash
 git clone <repository-url>
 cd Document-Retrieval-System-for-Chat-Applications
+
+## System Architecture
+
+![System Architecture](images/system-architecture.png)
+
+## Example Use Case
+
+![Example Use Case](images/example-use-case.png)
+
+## API Response Example
+
+![API Response](images/api-response.png)
+
+## Database Schema
+
+![Database Schema](images/database-schema.png)
